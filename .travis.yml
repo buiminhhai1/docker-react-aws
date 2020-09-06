@@ -9,6 +9,7 @@ script:
   - docker run -e CI=true haibui/docker-react-aws npm run test
 
 deploy:
+  skip_cleanup: true
   provider: elasticbeanstalk
   region: "ap-southeast-1"
   app: "docker"
